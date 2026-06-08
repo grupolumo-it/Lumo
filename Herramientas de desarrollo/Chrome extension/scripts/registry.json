@@ -1,0 +1,10 @@
+[
+  "sileo-bundle.umd.js",
+  "ieee_clear_console_lumo.js",
+  "ieee_console_watcher_lumo.js",
+  "ieee_css_selector_lumo.js",
+  "ieee_debug_lumo.js",
+  "ieee_inspector_lumo.js",
+  "ieee_main_utilities_lumo.js",
+  "ieee_storage_editor_lumo.js"
+]

@@ -1,0 +1,47 @@
+---
+config:
+  theme: redux
+  layout: elk
+---
+flowchart TB
+ subgraph s1["Nivel Lumo Ecosystem"]
+        n12["🏢 LBOs (Empresarios Lumo)"]
+        n14["🌐 Lumo Ecosystem"]
+        n15["🏪 Tienda fisica"]
+        n17["🚚 Distribuidor"]
+        n27["🏭 Producción"]
+  end
+ subgraph s2["Flujo para Soporte"]
+        n37["🖥️ Agente / Admin / Staff"]
+        n40["🗃️ CRM &amp; Gestión de Usuarios"]
+        n38["🎭 Impersonación de Cuentas de acuerdo a permisos"]
+  end
+    n2["🌐 Lumo.com/#co/"] --> n3["🏠 Homepage"]
+    n3 --> n4["📦 Seguimiento de pedidos"] & n6["🛍️ Lista de productos / Catalogo"] & n7["🔐 Inicio de Sesion"] & n31["🏪 Marketplace"]
+    n6 --> n8["🛒 Carro de compras"]
+    n8 --> n9["💳 Check Out"] & n7
+    n9 --> n7
+    n7 --> n10["👤 Perfil"]
+    n10 --> n11["👥 Customer"] & n13["✨ En caso de tener +2 productos"] & n12 & n37
+    n13 --- n14
+    n14 --> n15 & n12 & n17 & n27
+    n11 --> n4
+    n12 --> n4 & n21["📊 Dashboard del LBO"] & n41["Tienda personal para productos propios"]
+    n15 --> n20["🖥️ POS/Administración"]
+    n17 --> n18["🔌 Acceso a API publica"]
+    n21 --- n22["🤝 Mis Auspicios (Genealogía/Árbol)"]
+    n22 --- n28["🏆 Rankings de LBOs"]
+    n27 --> n29["📦 Administración de stock"]
+    n20 --- n4
+    n18 --> n4
+    n18 --- n34["📝 Soliciud de pedidos"]
+    n34 --> n35["🔍 Consulta de stock"]
+    n29 --- n36["📈 Proyecciones del stock/Novedades"]
+    n37 --> n40
+    n36 --- n39["Envios"]
+    n40 --> n38
+    n41 --- n31
+    n21 --> n42["📎 Ect..."] & n43["💰 Monedero: Puntos (PV/BV) y Comisiones"]
+    n38 --> n7
+
+    n2@{ shape: diam}

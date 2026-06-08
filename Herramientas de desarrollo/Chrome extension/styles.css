@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    --lumo-navy: #0B1142;
+    --lumo-blue: #1A237E;
+    --lumo-gray-100: #F3F4F6;
+    --lumo-gray-500: #6B7280;
+    --lumo-gray-800: #1F2937;
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.lumo-ieee-sidebar {
+    position: fixed !important;
+    left: 2rem !important;
+    top: 2rem !important;
+    height: auto !important;
+    max-height: calc(100vh - 4rem) !important;
+    width: 75px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: 2147483647 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-top: 20px !important;
+    border-radius: 1.5rem !important; /* 2xl radius */
+    box-shadow: var(--shadow-2xl) !important;
+    border: 1px solid var(--lumo-gray-100) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform: translateX(-150%);
+    font-family: 'Comfortaa', sans-serif !important;
+}
+
+.lumo-ieee-sidebar.active {
+    transform: translateX(0);
+}
+
+.ieee-sidebar-header {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--lumo-navy);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+}
+
+#ieee-sync-btn {
+    background: none;
+    border: none;
+    color: var(--lumo-gray-500);
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+    margin-top: 5px;
+}
+
+#ieee-sync-btn:hover {
+    color: var(--lumo-navy);
+}
+
+.ieee-sidebar-header i {
+    font-size: 16px;
+}
+
+.ieee-tool-container {
+    position: relative !important;
+    margin-bottom: 15px !important;
+}
+
+.ieee-btn-main {
+    position: relative !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 1rem !important; /* xl radius de design.md */
+    background: var(--lumo-gray-100) !important;
+    color: var(--lumo-navy) !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+    font-size: 18px !important;
+}
+
+.ieee-btn-main:hover {
+    background: var(--lumo-navy) !important;
+    color: white !important;
+}
+
+/* Tooltip / Label */
+.ieee-btn-main::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 75px;
+    top: 0 !important;
+    bottom: 0 !important;
+    margin: auto 0 !important;
+    background: var(--lumo-navy);
+    padding: 0 12px !important;
+    height: 28px !important; /* Altura fija para control total */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 1rem;
+    font-size: 11px;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    color: white;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease !important;
+}
+
+.ieee-btn-main:hover::after {
+    opacity: 1;
+}
+
+/* Dropdown Menu */
+.ieee-dropdown {
+    position: absolute !important;
+    left: 85px !important; /* Separado de la sidebar */
+    top: 0 !important;
+    background: white !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border-radius: 1.25rem !important;
+    box-shadow: var(--shadow-2xl) !important;
+    min-width: 180px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1px solid var(--lumo-gray-100) !important;
+    /* Estado oculto para la animación */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(-10px) !important;
+    pointer-events: none !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.ieee-dropdown.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+}
+
+.ieee-method-item {
+    padding: 12px 18px !important;
+    color: var(--lumo-gray-800) !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid var(--lumo-gray-100) !important;
+    transition: background 0.2s !important;
+    font-family: 'Comfortaa', sans-serif !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.ieee-method-item:hover {
+    background: var(--lumo-gray-100) !important;
+}
+
+.ieee-method-item i {
+    width: 16px !important;
+    text-align: center !important;
+    color: var(--lumo-navy) !important;
+    font-size: 14px !important;
+    opacity: 0.8;
+}

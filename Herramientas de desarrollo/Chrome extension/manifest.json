@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Lumo IEEE Sidebar",
+  "version": "1.42",
+  "description": "GUI dinámico para herramientas IEEE basado en Lumo Design System",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ],
+  "action": {
+    "default_title": "Alternar Lumo IEEE Tools"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scripts/*.js",
+        "scripts/registry.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "commands": {
+    "toggle-ieee-sidebar": {
+      "suggested_key": {
+        "default": "Alt+Shift+D"
+      },
+      "description": "Alternar visibilidad de la barra IEEE"
+    }
+  }
+}

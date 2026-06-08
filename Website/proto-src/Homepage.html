@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en" style="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Lumo - Empowering Modern Commerce Ecosystems</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Comfortaa', 'sans-serif'],
+          },
+          colors: {
+            lumo: {
+              navy: '#0B1142',
+              blue: '#1A237E',
+              gray: {
+                50: '#F9FAFB',
+                100: '#F3F4F6',
+                200: '#E5E7EB',
+                300: '#D1D5DB',
+                400: '#9CA3AF',
+                500: '#6B7280',
+                600: '#4B5563',
+                700: '#374151',
+                800: '#1F2937',
+                900: '#111827',
+              },
+              purple: {
+                light: '#E0E7FF',
+                dark: '#4F46E5'
+              }
+            }
+          },
+          borderRadius: {
+            'xl': '1rem',
+            '2xl': '1.5rem',
+            '3xl': '2rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style data-purpose="custom-utilities">
+    .bg-gradient-hero {
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    }
+
+    .shadow-soft {
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-lumo-gray-800 bg-lumo-gray-50 antialiased selection:bg-lumo-navy selection:text-white">
+
+  <!-- Header -->
+  <header id="header-container">
+    <div element-is="main-header" class="bg-white border-b border-lumo-gray-200 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20 gap-base">
+
+          <!-- Logo -->
+          <div class="flex-shrink-0"><a id="header-logo" class="text-2xl font-bold text-lumo-navy tracking-tight" href="#">Lumo</a></div>
+
+          <!-- Search Bar (Centered) -->
+          <div class="flex-grow flex justify-center max-w-xl mx-base">
+            <div class="relative w-full">
+        
+              <input id="global-search-input" class="w-full pl-5 pr-12 py-2.5 border border-lumo-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lumo-navy/10 focus:border-lumo-navy bg-lumo-gray-50 transition-all placeholder-lumo-gray-400 font-sans" placeholder="Search products, brands and more..." type="text" />
+              <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-lumo-gray-400 text-sm"></i></div>
+        
+            </div>
+          </div>
+
+          <!-- Navigation and Icons (Right) -->
+          <div id="header-actions-container" class="flex items-center space-x-6">
+
+            <nav id="header-nav-main" class="hidden lg:flex items-center"><a id="nav-link-marketplace" class="text-lumo-gray-600 hover:text-lumo-navy px-3 py-2 text-sm font-semibold transition-colors" href="#">Marketplace</a></nav>
+
+            <div id="buttons-right-container" class="flex items-center space-x-5">
+
+              <button id="btn-header-cart" aria-label="Carrito de compras" class="text-lumo-gray-600 hover:text-lumo-navy transition-colors relative"><i class="fa-solid fa-cart-shopping text-lg"></i></button>
+
+              <button id="btn-header-tracking" aria-label="Seguimiento de pedidos" class="text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i class="fa-solid fa-truck-fast text-lg"></i></button>
+
+              <button id="btn-header-profile" aria-label="Perfil" class="flex items-center space-x-2 text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i class="fa-regular fa-user text-lg"></i><span class="hidden xl:inline text-sm font-medium">Profile</span></button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sub-header (Floating Categories) -->
+    <div element-is="subheader" class="bg-white/80 backdrop-blur-md border-b border-lumo-gray-100 sticky top-[80px] z-40"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center h-12 space-x-8 overflow-x-auto no-scrollbar">
+
+        <span class="text-sm font-bold text-lumo-navy whitespace-nowrap">Categorías:</span>
+        
+        <nav id="category-nav-list" class="flex space-x-6">
+          <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3" href="#">Skin Care</a>
+          <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3" href="#">Tecnología</a>
+          <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3" href="#">Hogar</a>
+          <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3" href="#">Limpieza y Salud</a>
+        </nav>
+
+    </div></div></div>
+
+  </header>
+
+  <main>
+
+    <section id="directo-lumo-section" class="pt-10 pb-20 bg-lumo-gray-50/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div element-is="section-header" class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-lumo-navy mb-4">Directo de Lumo</h2>
+      <p class="text-lumo-gray-500 max-w-2xl mx-auto">Calidad premium desde nuestra propia línea de producción</p>
+    </div>
+    <!-- Featured Categories (Top Block) -->
+    <div id="directo-lumo-categories" element-is="featured-categories" class="flex justify-center flex-wrap gap-8 md:gap-16 mb-16">
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-emerald-50 group-hover:border-emerald-200 transition-all duration-300">
+          <i class="fa-solid fa-leaf text-2xl text-lumo-navy group-hover:text-emerald-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Bienestar</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-blue-50 group-hover:border-blue-200 transition-all duration-300">
+          <i class="fa-solid fa-microchip text-2xl text-lumo-navy group-hover:text-blue-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Tecnología</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-orange-50 group-hover:border-orange-200 transition-all duration-300">
+          <i class="fa-solid fa-house-chimney text-2xl text-lumo-navy group-hover:text-orange-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Hogar</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-red-50 group-hover:border-red-200 transition-all duration-300">
+          <i class="fa-solid fa-apple-whole text-2xl text-lumo-navy group-hover:text-red-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Nutrición</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-pink-50 group-hover:border-pink-200 transition-all duration-300">
+          <i class="fa-solid fa-shirt text-2xl text-lumo-navy group-hover:text-pink-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Moda</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-gray-100 group-hover:border-gray-300 transition-all duration-300">
+          <i class="fa-solid fa-dumbbell text-2xl text-lumo-navy group-hover:text-gray-700"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Deportes</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-amber-50 group-hover:border-amber-200 transition-all duration-300">
+          <i class="fa-solid fa-paw text-2xl text-lumo-navy group-hover:text-amber-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Mascotas</span>
+      </div>
+      <div element-is="category-item" class="flex flex-col items-center group cursor-pointer">
+        <div
+          class="w-20 h-20 rounded-full bg-white shadow-soft flex items-center justify-center border border-lumo-gray-100 group-hover:scale-110 group-hover:bg-indigo-50 group-hover:border-indigo-200 transition-all duration-300">
+          <i class="fa-solid fa-glasses text-2xl text-lumo-navy group-hover:text-indigo-600"></i>
+        </div>
+        <span class="mt-4 text-sm font-semibold text-lumo-navy">Accesorios</span>
+      </div>
+    </div>
+
+    <!-- Star Products Grid -->
+    <div id="directo-lumo-products" element-is="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Product 1 -->
+      <div element-is="product-card"
+        class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow">
+        <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+          <img alt="Lumo Smart Hub"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1558346489-19413928158b?auto=format&fit=crop&q=80&w=800">
+          <span
+            class="absolute top-3 left-3 bg-lumo-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Best
+            Seller</span>
+        </div>
+        <div class="space-y-1 mb-4">
+          <h4 class="font-bold text-lumo-navy">Lumo Smart Hub</h4>
+          <p class="text-xs text-lumo-gray-500 truncate">El corazón de tu hogar inteligente.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-lg font-bold text-lumo-navy">$299.00</span>
+          <button element-is="add-to-cart-btn"
+            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div element-is="product-card"
+        class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow">
+        <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+          <img alt="Lumo Essence Set"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=800">
+          <span
+            class="absolute top-3 left-3 bg-lumo-purple-dark text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">New
+            Arrival</span>
+        </div>
+        <div class="space-y-1 mb-4">
+          <h4 class="font-bold text-lumo-navy">Lumo Essence Set</h4>
+          <p class="text-xs text-lumo-gray-500 truncate">Cuidado orgánico para tu piel.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-lg font-bold text-lumo-navy">$145.00</span>
+          <button element-is="add-to-cart-btn"
+            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div element-is="product-card"
+        class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow">
+        <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+          <img alt="Signature Leather Wallet"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800">
+          <span
+            class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Premium</span>
+        </div>
+        <div class="space-y-1 mb-4">
+          <h4 class="font-bold text-lumo-navy">Signature Leather Wallet</h4>
+          <p class="text-xs text-lumo-gray-500 truncate">Artesanía en cuero de alta calidad.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-lg font-bold text-lumo-navy">$85.00</span>
+          <button element-is="add-to-cart-btn"
+            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div element-is="product-card"
+        class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow">
+        <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+          <img alt="Lumo Buds Pro"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800">
+          <span
+            class="absolute top-3 left-3 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Exclusive</span>
+        </div>
+        <div class="space-y-1 mb-4">
+          <h4 class="font-bold text-lumo-navy">Lumo Buds Pro</h4>
+          <p class="text-xs text-lumo-gray-500 truncate">Sonido envolvente sin cables.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-lg font-bold text-lumo-navy">$189.00</span>
+          <button element-is="add-to-cart-btn"
+            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+            <i class="fa-solid fa-cart-shopping text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- View All Catalog Link -->
+    <div class="mt-16 text-center">
+      <a id="directo-lumo-all-products" 
+         class="inline-flex items-center text-lumo-navy font-bold hover:text-lumo-blue transition-colors group text-lg" 
+         href="#">
+        Explorar nuestro catálogo completo
+        <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </div>
+
+  </div>
+    </section>
+
+<section id="marketplace-section" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div element-is="section-header" class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-lumo-navy mb-4">Marketplace: El Boulevard Digital</h2>
+      <p class="text-lumo-gray-500 max-w-3xl mx-auto text-lg">
+        Descubre el corazón del comercio moderno. Miles de productos seleccionados y gestionados por nuestra comunidad de empresarios 
+        independientes (LBOs) que están transformando la forma de comprar.
+      </p>
+    </div>
+
+    <!-- Marketplace Spotlight Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+      
+      <!-- Featured Entrepreneur (Large Left Card) -->
+      <div element-is="entrepreneur-highlight" class="lg:col-span-7 bg-lumo-gray-50 rounded-[2.5rem] p-8 md:p-12 border border-lumo-gray-100 flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl rotate-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Empresario del mes" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1">
+          <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold text-white bg-amber-500 rounded-full uppercase tracking-widest">Empresario del Mes</span>
+          <h3 class="text-2xl font-bold text-lumo-navy mb-3">Elena Rodríguez</h3>
+          <p class="text-lumo-gray-600 mb-6 italic">"Lumo me permitió digitalizar mi pasión por el bienestar. Hoy gestiono mi propia tienda con productos que realmente cambian vidas."</p>
+          <a href="#" class="text-lumo-navy font-bold flex items-center gap-2 hover:gap-3 transition-all">Visitar su tienda <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Column: Trending & Shop Spotlight -->
+      <div class="lg:col-span-5 flex flex-col gap-8">
+        <!-- Trending Offer Card -->
+        <div element-is="offer-card" class="bg-lumo-navy rounded-[2rem] p-8 text-white relative overflow-hidden group">
+          <div class="relative z-10">
+            <h4 class="text-xl font-bold mb-2">Oferta Relámpago</h4>
+            <p class="text-lumo-gray-300 text-sm mb-4">Hasta 40% OFF en productos de nutrición publicados por LBOs.</p>
+            <button class="bg-white text-lumo-navy px-6 py-2 rounded-full text-sm font-bold hover:bg-lumo-gray-100 transition-colors">Ver Ofertas</button>
+          </div>
+          <i class="fa-solid fa-bolt absolute -right-4 -bottom-4 text-8xl text-white/5 group-hover:rotate-12 transition-transform"></i>
+        </div>
+
+        <!-- New Shops Card -->
+        <div element-is="shops-list-card" class="bg-white rounded-[2rem] p-8 border border-lumo-gray-200 shadow-soft">
+          <h4 class="font-bold text-lumo-navy mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-store text-amber-500"></i> Tiendas en Tendencia
+          </h4>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=100" alt="Pure Clean Co Logo" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+              <div class="flex-1 border-b border-lumo-gray-100 pb-2">
+                <p class="text-sm font-semibold text-lumo-navy">Pure Clean Co.</p>
+                <p class="text-[10px] text-lumo-gray-400">Especialistas en Limpieza Verde</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=100" alt="TechSphere Logo" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+              <div class="flex-1 border-b border-lumo-gray-100 pb-2">
+                <p class="text-sm font-semibold text-lumo-navy">TechSphere LBO</p>
+                <p class="text-[10px] text-lumo-gray-400">Gadgets de última generación</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Grand CTA -->
+    <div class="text-center">
+      <a id="marketplace-main-cta" 
+         href="#" 
+         class="inline-flex items-center justify-center px-12 py-6 bg-lumo-navy text-white text-xl font-bold rounded-full shadow-2xl hover:bg-lumo-blue hover:scale-105 transition-all group">
+        ¡Explorar la Marketplace!
+        <i class="fa-solid fa-rocket ml-4 group-hover:translate-x-2 transition-transform"></i>
+      </a>
+      <p class="mt-6 text-lumo-gray-400 text-sm">Más de 5,000 emprendedores ya están esperando por ti.</p>
+    </div>
+
+  </div>
+</section>
+
+    <!-- BEGIN: HeroSection -->
+    <section id="hero-section" class="bg-gradient-hero py-20 lg:py-28 overflow-hidden relative">
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Hero Text -->
+          <div class="max-w-2xl">
+            <h1 class="text-5xl lg:text-6xl font-bold text-lumo-navy leading-tight mb-6 text-balance">Empowering Modern<br />Commerce Ecosystems</h1>
+            <p class="text-lg text-lumo-gray-600 mb-10 text-balance leading-relaxed">Lumo connects visionary entrepreneurs (LBOs) with high-quality products and customers in a seamless, professional digital marketplace.</p>
+            
+            <div class="flex flex-wrap gap-4">
+              <a id="hero-cta-shop" class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-full text-white bg-lumo-navy hover:bg-lumo-blue transition-colors shadow-sm" href="#">Shop Now</a>
+              <a id="hero-cta-lbo" class="inline-flex justify-center items-center px-8 py-3.5 border-2 border-lumo-navy text-base font-medium rounded-full text-lumo-navy bg-transparent hover:bg-lumo-gray-50 transition-colors" href="#">Join as LBO</a>
+            </div>
+          </div>
+
+          <!-- Hero Image & Widget -->
+          <div class="relative lg:ml-10 mt-10 lg:mt-0">
+
+            <!-- Main Laptop Image Placeholder -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl relative">
+              <img alt="Modern laptop on a desk showing analytical dashboard" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0lFfHqzWND_5Fr8feOiHE3PgwX4nsquOHZPhFIgQlc6t5Okmmi2lfJD4GSVyqgYGUXR_pgk_RTECWwgNqXNFatARXGjj3CgyxLSl_OzG_xw52dnE8IdqGeAM-c5mpGlMXm8MKc9CM6WRXZtDfphfvZ0cG0jbHo95CdstKd78RGcGGIzRiJOEb4d-gKlw_wTa2KXs2VugX5qlW8K67hKeBJPiTQqkGK0WU9AekSAzzaeWRtrDtuxUf99CSG7O_2hNgNHL9e2Pu3wU" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+            </div>
+
+            <!-- Order Tracking Floating Widget -->
+            <div id="hero-tracking-widget" class="fixed bottom-8 right-8 md:right-12 rounded-2xl p-6 shadow-2xl max-w-[280px] sm:max-w-sm w-full border border-lumo-gray-100 z-[100] bg-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-2">
+              <div class="flex items-center mb-4 text-lumo-navy font-semibold">
+                <i class="fa-solid fa-truck-fast mr-2"></i>Order Tracking
+              </div>
+              <div class="relative">
+                <input id="hero-tracking-input" class="w-full pl-4 pr-12 py-3 bg-lumo-gray-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-lumo-navy transition-all" placeholder="Tracking ID" type="text" />
+                <button id="hero-tracking-submit" class="absolute inset-y-0 right-2 flex items-center justify-center w-8 h-8 my-auto bg-lumo-navy text-white rounded-full hover:bg-lumo-blue transition-colors">
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div></div>
+
+      <!-- Decorative background blur -->
+      <div class="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 pointer-events-none"></div>
+
+    </section>
+
+
+    <!-- BEGIN: PromotionalCards -->
+    <section id="promotional-section" class="py-20 bg-lumo-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Shop Card -->
+          <div id="promo-card-shop" class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-sm border border-lumo-gray-100 flex flex-col justify-between items-start h-full">
+            <div>
+              <div class="w-14 h-14 bg-lumo-purple-light text-lumo-purple-dark rounded-full flex items-center justify-center mb-8"><i class="fa-solid fa-cart-shopping text-xl"></i></div>
+              <h3 class="text-2xl font-bold text-lumo-navy mb-4">Shop the Marketplace</h3>
+              <p class="text-lumo-gray-600 mb-10 leading-relaxed text-balance">Access exclusive deals on top-tier products, backed by the Lumo quality guarantee and professional LBO support.</p>
+            </div>
+            <a class="inline-flex justify-center items-center px-8 py-3 bg-[#5c6b90] hover:bg-[#4a5675] text-white font-medium rounded-full transition-colors mt-auto w-full sm:w-auto" href="#">Browse Products</a>
+          </div>
+
+          <!-- LBO Card -->
+          <div id="promo-card-lbo" class="bg-lumo-navy rounded-[2rem] p-10 lg:p-12 shadow-sm flex flex-col justify-between items-start h-full">
+            <div>
+              <div class="w-14 h-14 bg-white/10 text-white rounded-full flex items-center justify-center mb-8 border border-white/20"><i class="fa-solid fa-briefcase text-xl"></i></div>
+              <h3 class="text-2xl font-bold text-white mb-4">Become a Lumo LBO</h3>
+              <p class="text-lumo-gray-300 mb-10 leading-relaxed text-balance">Start your entrepreneurial journey. Build your business, track your commissions, and grow with our global ecosystem.</p>
+            </div>
+            <a class="inline-flex justify-center items-center px-8 py-3 bg-white hover:bg-lumo-gray-50 text-lumo-navy font-medium rounded-full transition-colors mt-auto w-full sm:w-auto" href="#">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BEGIN: MainFooter -->
+  <footer id="main-footer" class="bg-white border-t border-lumo-gray-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+
+      <!-- Copyright -->
+      <div class="text-center md:text-left">
+        <p class="text-sm font-bold text-lumo-navy mb-1">Lumo Ecosystem</p>
+        <p class="text-xs text-lumo-gray-500">© 2024 Lumo Ecosystem. All rights reserved.</p>
+      </div>
+
+      <!-- Footer Links -->
+      <nav id="footer-nav-secondary" class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <a class="text-sm text-lumo-gray-500 hover:text-lumo-navy transition-colors" href="#">Terms of Service</a>
+        <a class="text-sm text-lumo-gray-500 hover:text-lumo-navy transition-colors" href="#">Privacy Policy</a>
+        <a class="text-sm text-lumo-gray-500 hover:text-lumo-navy transition-colors" href="#">Contact Us</a>
+      </nav>
+
+      <!-- Utility Icons -->
+      <div id="footer-utilities" class="flex items-center space-x-4 text-lumo-gray-500">
+        <button id="btn-footer-lang" aria-label="Language/Region" class="hover:text-lumo-navy transition-colors"><i class="fa-solid fa-globe"></i></button>
+        <button id="btn-footer-share" aria-label="Share" class="hover:text-lumo-navy transition-colors"><i class="fa-solid fa-share-nodes"></i></button>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

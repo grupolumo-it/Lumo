@@ -1,0 +1,234 @@
+{
+  "main": {
+    "id": "1ae1f18f4e215ccf",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c1acdc1e9f75067",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1769a452f2136b21",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stack Tecnológico de Lumo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stack Tecnológico de Lumo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4bf813a739da3ac2",
+    "type": "split",
+    "children": [
+      {
+        "id": "b37779a11957513c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "685c47e50dedc101",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "67502c6013a61791",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "5621e0712c018a8c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 313.5
+  },
+  "right": {
+    "id": "f71e77c5f1467ff5",
+    "type": "split",
+    "children": [
+      {
+        "id": "17877f81b179fdb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2596dd7690ad0f16",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Stack Tecnológico de Lumo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Stack Tecnológico de Lumo"
+            }
+          },
+          {
+            "id": "52272d41451cc6d1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Stack Tecnológico de Lumo.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Stack Tecnológico de Lumo"
+            }
+          },
+          {
+            "id": "36f8869c5f2dd368",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "aef8052b50e85510",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "3dfa250f672cb6b6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Stack Tecnológico de Lumo.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Stack Tecnológico de Lumo"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 215.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "1769a452f2136b21",
+  "lastOpenFiles": [
+    "DSLL.md",
+    "Proyectos/Protector extensiones para Nautilus.md",
+    "Stack Tecnológico de Lumo.md",
+    "Proyectos/Red Privada P2P Híbrida (Go + React).md",
+    "Plantillas.md",
+    "Proyectos/Jupyter runtime environment.md",
+    "Proyectos",
+    "Diagramas/Mapa de acceso - Lumo.mermaid",
+    "Diagramas/Untitled.mermaid",
+    "Sin título.md",
+    "Bitácora de Desarrollo.md",
+    "Bitácora de desarrollo",
+    "Sin título 2.md",
+    "Diagramas/mermaid-live-editor/node_modules/@types/d3-dispatch/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/@types/d3-dispatch/package.json",
+    "Diagramas/mermaid-live-editor/node_modules/@types/d3-dispatch/LICENSE",
+    "Diagramas/mermaid-live-editor/node_modules/@types/d3-dispatch/index.d.ts",
+    "Diagramas/mermaid-live-editor/node_modules/@types/d3-dispatch",
+    "Diagramas/mermaid-live-editor/package-lock.json",
+    "Diagramas/mermaid-live-editor/node_modules/mermaid/dist/docs/vite.config.d.ts",
+    "Diagramas/mermaid-live-editor/node_modules/mermaid/README.zh-CN.md",
+    "Diagramas/mermaid-live-editor/node_modules/mermaid/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/monaco-editor/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/monaco-editor/CHANGELOG.md",
+    "Diagramas/mermaid-live-editor/node_modules/@mermaid-js/mermaid-zenuml/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/sprites/solid.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/sprites/regular.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/sprites/brands.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/z.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/yin-yang.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/yen-sign.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/y.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/xmarks-lines.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/xmark.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@fortawesome/fontawesome-free/svgs/solid/x.svg",
+    "Diagramas/mermaid-live-editor/node_modules/@mermaid-js/layout-elk/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/mermaid/node_modules/marked/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/mermaid/node_modules/marked/man/marked.1.md",
+    "Diagramas/mermaid-live-editor/node_modules/mermaid/node_modules/marked/LICENSE.md",
+    "Diagramas/mermaid-live-editor/node_modules/vitest/node_modules/picomatch/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/vitest/node_modules/tinyexec/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/vitest/node_modules/check-error/README.md",
+    "Diagramas/mermaid-live-editor/node_modules/c8/node_modules/@bcoe/v8-coverage/LICENSE.md",
+    "Diagramas/mermaid-live-editor/node_modules/c8/node_modules/@bcoe/v8-coverage/CHANGELOG.md",
+    "Diagramas/mermaid-live-editor/node_modules/c8/node_modules/@bcoe/v8-coverage/dist/lib/README.md"
+  ]
+}
