@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Lumo IEEE Sidebar",
-  "version": "1.42",
-  "description": "GUI dinámico para herramientas IEEE basado en Lumo Design System",
+  "version": "1.43",
+  "description": "GUI din\u00e1mico para herramientas IEEE basado en Lumo Design System",
   "permissions": [
     "activeTab",
     "scripting"

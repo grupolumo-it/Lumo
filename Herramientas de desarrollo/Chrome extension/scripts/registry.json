@@ -6,5 +6,6 @@
   "ieee_debug_lumo.js",
   "ieee_inspector_lumo.js",
   "ieee_main_utilities_lumo.js",
+  "ieee_size_inspector_lumo.js",
   "ieee_storage_editor_lumo.js"
 ]
