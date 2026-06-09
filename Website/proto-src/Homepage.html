@@ -75,7 +75,7 @@
           <div class="flex-shrink-0"><a id="header-logo" class="text-2xl font-bold text-lumo-navy tracking-tight" href="#">Lumo</a></div>
 
           <!-- Search Bar (Centered) -->
-          <div class="flex-grow flex justify-center max-w-xl mx-base">
+          <div class="hidden md:flex flex-grow justify-center max-w-xl mx-4">
             <div class="relative w-full">
         
               <input id="global-search-input" class="w-full pl-5 pr-12 py-2.5 border border-lumo-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lumo-navy/10 focus:border-lumo-navy bg-lumo-gray-50 transition-all placeholder-lumo-gray-400 font-sans" placeholder="Search products, brands and more..." type="text" />
@@ -90,6 +90,8 @@
             <nav id="header-nav-main" class="hidden lg:flex items-center"><a id="nav-link-marketplace" class="text-lumo-gray-600 hover:text-lumo-navy px-3 py-2 text-sm font-semibold transition-colors" href="#">Marketplace</a></nav>
 
             <div id="buttons-right-container" class="flex items-center space-x-5">
+
+              <button id="btn-header-search-mobile" element-is="mobile-search-button" aria-label="Abrir búsqueda" class="md:hidden text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i class="fa-solid fa-magnifying-glass text-lg"></i></button>
 
               <button id="btn-header-cart" aria-label="Carrito de compras" class="text-lumo-gray-600 hover:text-lumo-navy transition-colors relative"><i class="fa-solid fa-cart-shopping text-lg"></i></button>
 
@@ -288,10 +290,10 @@
     <!-- View All Catalog Link -->
     <div class="mt-16 text-center">
       <a id="directo-lumo-all-products" 
-         class="inline-flex items-center text-lumo-navy font-bold hover:text-lumo-blue transition-colors group text-lg" 
+         class="inline-flex items-center px-10 py-4 border-2 border-lumo-navy text-2xl font-bold rounded-full text-lumo-navy hover:bg-lumo-navy hover:text-white transition-all shadow-md group" 
          href="#">
         Explorar nuestro catálogo completo
-        <i class="fa-solid fa-chevron-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+        <i class="fa-solid fa-chevron-right ml-3 group-hover:translate-x-2 transition-transform"></i>
       </a>
     </div>
 
@@ -385,12 +387,12 @@
 
           <!-- Hero Text -->
           <div class="max-w-2xl">
-            <h1 class="text-5xl lg:text-6xl font-bold text-lumo-navy leading-tight mb-6 text-balance">Empowering Modern<br />Commerce Ecosystems</h1>
-            <p class="text-lg text-lumo-gray-600 mb-10 text-balance leading-relaxed">Lumo connects visionary entrepreneurs (LBOs) with high-quality products and customers in a seamless, professional digital marketplace.</p>
+            <h1 class="text-5xl lg:text-6xl font-bold text-lumo-navy leading-tight mb-6 text-balance">Potenciando los ecosistemas<br />de comercio moderno</h1>
+            <p class="text-lg text-lumo-gray-600 mb-10 text-balance leading-relaxed">Lumo conecta a emprendedores visionarios (LBOs) con productos de alta calidad y clientes en un marketplace digital profesional y sin fricciones.</p>
             
             <div class="flex flex-wrap gap-4">
-              <a id="hero-cta-shop" class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-full text-white bg-lumo-navy hover:bg-lumo-blue transition-colors shadow-sm" href="#">Shop Now</a>
-              <a id="hero-cta-lbo" class="inline-flex justify-center items-center px-8 py-3.5 border-2 border-lumo-navy text-base font-medium rounded-full text-lumo-navy bg-transparent hover:bg-lumo-gray-50 transition-colors" href="#">Join as LBO</a>
+              <a id="hero-cta-shop" class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-full text-white bg-lumo-navy hover:bg-lumo-blue transition-colors shadow-sm" href="#">Comprar Ahora</a>
+              <a id="hero-cta-lbo" class="inline-flex justify-center items-center px-8 py-3.5 border-2 border-lumo-navy text-base font-medium rounded-full text-lumo-navy bg-transparent hover:bg-lumo-gray-50 transition-colors" href="#">Unirse como LBO</a>
             </div>
           </div>
 
@@ -404,17 +406,22 @@
             </div>
 
             <!-- Order Tracking Floating Widget -->
-            <div id="hero-tracking-widget" class="fixed bottom-8 right-8 md:right-12 rounded-2xl p-6 shadow-2xl max-w-[280px] sm:max-w-sm w-full border border-lumo-gray-100 z-[100] bg-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-2">
+            <div id="hero-tracking-widget" class="hidden md:block fixed bottom-8 right-8 md:right-12 rounded-2xl p-6 shadow-2xl max-w-[280px] sm:max-w-sm w-full border border-lumo-gray-100 z-[100] bg-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-2">
               <div class="flex items-center mb-4 text-lumo-navy font-semibold">
-                <i class="fa-solid fa-truck-fast mr-2"></i>Order Tracking
+                <i class="fa-solid fa-truck-fast mr-2"></i>Seguimiento de pedidos
               </div>
               <div class="relative">
-                <input id="hero-tracking-input" class="w-full pl-4 pr-12 py-3 bg-lumo-gray-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-lumo-navy transition-all" placeholder="Tracking ID" type="text" />
+                <input id="hero-tracking-input" class="w-full pl-4 pr-12 py-3 bg-lumo-gray-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-lumo-navy transition-all" placeholder="ID de seguimiento" type="text" />
                 <button id="hero-tracking-submit" class="absolute inset-y-0 right-2 flex items-center justify-center w-8 h-8 my-auto bg-lumo-navy text-white rounded-full hover:bg-lumo-blue transition-colors">
                   <i class="fa-solid fa-arrow-right text-xs"></i>
                 </button>
               </div>
             </div>
+
+            <!-- Mobile Floating Tracking Button (FAB) -->
+            <button id="btn-mobile-tracking-fab" element-is="mobile-tracking-fab" aria-label="Abrir seguimiento de pedidos" class="fixed bottom-8 right-8 md:hidden bg-lumo-navy text-white p-4 rounded-full shadow-lg z-[100] hover:bg-lumo-blue transition-colors">
+                <i class="fa-solid fa-truck-fast text-xl"></i>
+            </button>
 
           </div>
 
@@ -436,20 +443,20 @@
           <div id="promo-card-shop" class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-sm border border-lumo-gray-100 flex flex-col justify-between items-start h-full">
             <div>
               <div class="w-14 h-14 bg-lumo-purple-light text-lumo-purple-dark rounded-full flex items-center justify-center mb-8"><i class="fa-solid fa-cart-shopping text-xl"></i></div>
-              <h3 class="text-2xl font-bold text-lumo-navy mb-4">Shop the Marketplace</h3>
-              <p class="text-lumo-gray-600 mb-10 leading-relaxed text-balance">Access exclusive deals on top-tier products, backed by the Lumo quality guarantee and professional LBO support.</p>
+              <h3 class="text-2xl font-bold text-lumo-navy mb-4">Comprar en el Marketplace</h3>
+              <p class="text-lumo-gray-600 mb-10 leading-relaxed text-balance">Accede a ofertas exclusivas en productos de primer nivel, con la garantía de calidad de Lumo y el respaldo de LBOs profesionales.</p>
             </div>
-            <a class="inline-flex justify-center items-center px-8 py-3 bg-[#5c6b90] hover:bg-[#4a5675] text-white font-medium rounded-full transition-colors mt-auto w-full sm:w-auto" href="#">Browse Products</a>
+            <a class="inline-flex justify-center items-center px-8 py-3 bg-[#5c6b90] hover:bg-[#4a5675] text-white font-medium rounded-full transition-colors mt-auto w-full sm:w-auto" href="#">Ver Productos</a>
           </div>
 
           <!-- LBO Card -->
           <div id="promo-card-lbo" class="bg-lumo-navy rounded-[2rem] p-10 lg:p-12 shadow-sm flex flex-col justify-between items-start h-full">
             <div>
               <div class="w-14 h-14 bg-white/10 text-white rounded-full flex items-center justify-center mb-8 border border-white/20"><i class="fa-solid fa-briefcase text-xl"></i></div>
-              <h3 class="text-2xl font-bold text-white mb-4">Become a Lumo LBO</h3>
-              <p class="text-lumo-gray-300 mb-10 leading-relaxed text-balance">Start your entrepreneurial journey. Build your business, track your commissions, and grow with our global ecosystem.</p>
+              <h3 class="text-2xl font-bold text-white mb-4">Conviértete en un LBO de Lumo</h3>
+              <p class="text-lumo-gray-300 mb-10 leading-relaxed text-balance">Inicia tu camino emprendedor. Construye tu negocio, rastrea tus comisiones y crece con nuestro ecosistema global.</p>
             </div>
-            <a class="inline-flex justify-center items-center px-8 py-3 bg-white hover:bg-lumo-gray-50 text-lumo-navy font-medium rounded-full transition-colors mt-auto w-full sm:w-auto" href="#">Learn More</a>
+            <a class="inline-flex justify-center items-center px-8 py-3 bg-white hover:bg-lumo-gray-50 text-lumo-navy font-medium rounded-full transition-colors mt-auto w-full sm:w-auto" href="#">Saber más</a>
           </div>
 
         </div>
