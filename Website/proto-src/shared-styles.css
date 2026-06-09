@@ -1,0 +1,87 @@
+/* shared-styles.css */
+
+/* ==========================================================================
+   1. ESTILOS GLOBALES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #faf9f9;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Forzar renderizado uniforme de los iconos de Google */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+/* Esconder scrolls verticales fantasma */
+.no-scrollbar {
+    overflow-y: hidden !important;
+    scrollbar-width: thin;
+}
+
+/* Ajustes nativos de balanceo de texto */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* ==========================================================================
+   2. BARRAS DE DESPLAZAMIENTO PERSONALIZADAS (Scrollbars)
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5d3;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   3. CLASES DE UTILIDAD COMPARTIDAS (FONDOS Y SOMBRAS)
+   ========================================================================== */
+.ambient-shadow {
+    box-shadow: 0px 8px 24px rgba(0, 29, 119, 0.06);
+}
+
+.product-card-shadow:hover {
+    box-shadow: 0px 8px 24px rgba(0, 29, 119, 0.06);
+}
+
+.shadow-soft {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.login-gradient {
+    background: linear-gradient(135deg, #000d46 0%, #122362 100%);
+}
+
+.bg-gradient-hero {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* ==========================================================================
+   4. COMPORTAMIENTO RESPONSIVO (MÓVIL)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Agrega esta clase al body únicamente en la Login Page */
+    body.login-page {
+        background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        zoom: 0.8;
+    }
+}

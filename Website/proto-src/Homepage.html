@@ -7,60 +7,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Lumo - Empowering Modern Commerce Ecosystems</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="./tailwind-theme.js"></script>
+  <link href="./shared-styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
     rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Comfortaa', 'sans-serif'],
-          },
-          colors: {
-            lumo: {
-              navy: '#0B1142',
-              blue: '#1A237E',
-              gray: {
-                50: '#F9FAFB',
-                100: '#F3F4F6',
-                200: '#E5E7EB',
-                300: '#D1D5DB',
-                400: '#9CA3AF',
-                500: '#6B7280',
-                600: '#4B5563',
-                700: '#374151',
-                800: '#1F2937',
-                900: '#111827',
-              },
-              purple: {
-                light: '#E0E7FF',
-                dark: '#4F46E5'
-              }
-            }
-          },
-          borderRadius: {
-            'xl': '1rem',
-            '2xl': '1.5rem',
-            '3xl': '2rem',
-          }
-        }
-      }
-    }
   </script>
-  <style data-purpose="custom-utilities">
-    .bg-gradient-hero {
-      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    }
 
-    .shadow-soft {
-      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-    }
-
-    .text-balance {
-      text-wrap: balance;
-    }
-  </style>
 </head>
 
 <body class="font-sans text-lumo-gray-800 bg-lumo-gray-50 antialiased selection:bg-lumo-navy selection:text-white">
@@ -406,7 +359,7 @@
             </div>
 
             <!-- Order Tracking Floating Widget -->
-            <div id="hero-tracking-widget" class="hidden md:block fixed bottom-8 right-8 md:right-12 rounded-2xl p-6 shadow-2xl max-w-[280px] sm:max-w-sm w-full border border-lumo-gray-100 z-[100] bg-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-2">
+            <div id="hero-tracking-widget" class="fixed bottom-8 right-8 md:right-12 rounded-2xl p-6 shadow-2xl max-w-[280px] sm:max-w-sm w-full border border-lumo-gray-100 z-[100] bg-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-2">
               <div class="flex items-center mb-4 text-lumo-navy font-semibold">
                 <i class="fa-solid fa-truck-fast mr-2"></i>Seguimiento de pedidos
               </div>
@@ -417,11 +370,6 @@
                 </button>
               </div>
             </div>
-
-            <!-- Mobile Floating Tracking Button (FAB) -->
-            <button id="btn-mobile-tracking-fab" element-is="mobile-tracking-fab" aria-label="Abrir seguimiento de pedidos" class="fixed bottom-8 right-8 md:hidden bg-lumo-navy text-white p-4 rounded-full shadow-lg z-[100] hover:bg-lumo-blue transition-colors">
-                <i class="fa-solid fa-truck-fast text-xl"></i>
-            </button>
 
           </div>
 
