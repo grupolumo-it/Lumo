@@ -19,7 +19,7 @@
         "archivo": "Pages/login/index.html",
         "hx-get": "Pages/login/index.html",
         "hx-trigger": "load",
-        "hx-target": "#main-header",
+        "hx-target": "#root",
         "hx-swap": "outerHTML",
         "hx-push-url": "/#login"
     },
