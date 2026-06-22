@@ -1,5 +1,5 @@
-<main id="main-container bg-surface text-on-surface"
-    class="max-w-container-max mx-auto px-4 sm:px-gutter py-md flex flex-col lg:flex-row gap-md lg:gap-lg relative">
+<main id="main-container"
+    class="max-w-container-max mx-auto px-4 sm:px-gutter py-md flex flex-col lg:flex-row gap-md lg:gap-lg bg-surface text-on-surface relative">
     <!-- Sidebar Navigation -->
     <aside element-is="catalog-sidebar" class="hidden lg:flex flex-col w-64 shrink-0 space-y-md">
 
@@ -386,37 +386,8 @@
         </div>
     </section>
 
-    <!-- Floating Action Button (Marketplace Context) -->
-    <div
-        class="sticky bottom-8 left-0 right-0 h-0 pointer-events-none z-[100] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div id="cart-floating-widget"
-            class="pointer-events-auto absolute bottom-0 right-4 sm:right-6 lg:right-8 rounded-2xl p-5 shadow-2xl max-w-[300px] sm:max-w-sm w-full border border-lumo-gray-100 bg-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-2">
+    <!-- importacion del componente de carrito flotante -->
+    <div element-is="cart-floating-widget" hx-get="/Pages/catalog/components/cart-floating-widget.html"
+        hx-trigger="load" hx-target="this" hx-swap="outerHTML"></div>
 
-            <div class="flex items-center justify-between mb-4 text-lumo-navy font-semibold font-sans">
-                <div class="flex items-center relative">
-                    <div class="relative mr-3">
-                        <i class="fa-solid fa-basket-shopping text-xl"></i>
-                        <span
-                            class="absolute -top-2 -right-2 bg-lumo-purple-dark text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
-                            3
-                        </span>
-                    </div>
-                    <span class="text-headline-sm">Mi Carrito</span>
-                </div>
-                <span class="text-body-md text-lumo-gray-600">$42.50</span>
-            </div>
-
-            <div class="relative font-sans">
-                <button id="cart-checkout-btn"
-                    class="w-full pl-6 pr-12 py-3 bg-lumo-navy text-white rounded-full text-label-md font-semibold hover:bg-lumo-blue transition-all flex items-center justify-between shadow-md group">
-                    <span>Ver carrito y pagar</span>
-                    <span
-                        class="absolute inset-y-0 right-2 flex items-center justify-center w-8 h-8 my-auto bg-white/20 text-white rounded-full group-hover:bg-white/30 transition-colors">
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </span>
-                </button>
-            </div>
-
-        </div>
-    </div>
 </main>
