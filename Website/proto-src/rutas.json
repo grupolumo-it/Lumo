@@ -1,0 +1,34 @@
+{
+    "#catalog": {
+        "archivo": "Pages/catalog/index.html",
+        "hx-get": "Pages/catalog/index.html",
+        "hx-trigger": "load",
+        "hx-target": "this",
+        "hx-swap": "outerHTML",
+        "hx-push-url": "/catalog"
+    },
+    "#homepage": {
+        "archivo": "Pages/homepage/index.html",
+        "hx-get": "Pages/homepage/index.html",
+        "hx-trigger": "load",
+        "hx-target": "this",
+        "hx-swap": "outerHTML",
+        "hx-push-url": "/homepage"
+    },
+    "#login": {
+        "archivo": "Pages/login/index.html",
+        "hx-get": "Pages/login/index.html",
+        "hx-trigger": "load",
+        "hx-target": "this",
+        "hx-swap": "outerHTML",
+        "hx-push-url": "/login"
+    },
+    "#product": {
+        "archivo": "Pages/product/index.html",
+        "hx-get": "Pages/product/index.html",
+        "hx-trigger": "load",
+        "hx-target": "this",
+        "hx-swap": "outerHTML",
+        "hx-push-url": "/product"
+    }
+}

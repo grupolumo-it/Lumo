@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lumo - Empowering Modern Commerce Ecosystems</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+    <link href="./CSS/shared-styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Librería utilitaria para evitar codigo repetido -->
+    <script src="js/htmx.min.js"></script>
+</head>
+
+<body hx-get="components/layount/layount.html" hx-trigger="load" hx-target="#root" hx-swap="outerHTML">
+
+    <htmx-main id="root">
+        <p class="flex items-center justify-center min-h-screen text-gray-500 animate-pulse">Cargando componentes...</p>
+    </htmx-main>
+
+</body>
+
+</html>

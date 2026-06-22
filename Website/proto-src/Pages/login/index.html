@@ -11,14 +11,10 @@
     <link href="./shared-styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
 </head>
+
 <body class="bg-background text-on-background min-h-screen flex items-center justify-center p-gutter login-page">
     <!-- Main Container: Split Layout on Desktop -->
     <main element-is="login-card"
@@ -49,7 +45,8 @@
                     <div class="flex justify-between items-center px-xs">
                         <label class="font-label-md text-label-md text-on-surface-variant"
                             for="password">Password</label>
-                        <a element-is="forgot-password-link" class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors"
+                        <a element-is="forgot-password-link"
+                            class="font-label-sm text-label-sm text-outline hover:text-primary transition-colors"
                             href="#">Forgot Password?</a>
                     </div>
                     <div class="relative">
@@ -59,7 +56,8 @@
                         <button element-is="toggle-password-btn"
                             class="absolute right-md top-1/2 -translate-y-1/2 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
                             type="button">
-                            <span element-is="password-visibility-icon" class="material-symbols-outlined">visibility</span>
+                            <i element-is="password-visibility-icon"
+                                class="fa-regular fa-eye"></i>
                         </button>
                     </div>
                 </div>
@@ -75,8 +73,10 @@
                 </button>
             </form>
             <!-- Footer Section -->
-            <div element-is="login-footer-options" class="mt-xl pt-lg border-t border-outline-variant/30 w-full max-w-[480px]">
-                <p class="font-body-sm text-body-sm text-on-surface-variant mb-sm text-center md:text-left">Don't have an account?</p>
+            <div element-is="login-footer-options"
+                class="mt-xl pt-lg border-t border-outline-variant/30 w-full max-w-[480px]">
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-sm text-center md:text-left">Don't have
+                    an account?</p>
                 <div class="flex flex-col sm:flex-row gap-sm">
                     <button element-is="register-button"
                         class="flex-1 min-h-[48px] border border-outline text-primary rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">
@@ -99,9 +99,10 @@
             <!-- Overlay Content -->
             <div
                 class="relative z-10 w-full h-full flex flex-col items-center justify-end p-xl bg-gradient-to-t from-primary/80 to-transparent">
-                <div element-is="hero-testimonial-card" class="glass-effect p-lg rounded-lg max-w-[400px] border border-white/20">
+                <div element-is="hero-testimonial-card"
+                    class="glass-effect p-lg rounded-lg max-w-[400px] border border-white/20">
                     <div element-is="hero-badge" class="flex items-center space-x-sm mb-sm text-primary">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stars</span>
+                        <i class="fa-solid fa-star"></i>
                         <span class="font-label-md text-label-md">Trusted Ecosystem</span>
                     </div>
                     <p class="font-headline-sm text-headline-sm text-primary mb-sm">Building the future of digital

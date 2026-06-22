@@ -1,0 +1,82 @@
+<!-- Header -->
+<header id="header-container">
+    <div element-is="main-header" class="bg-white border-b border-lumo-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 gap-base">
+
+                <!-- Logo -->
+                <div class="flex-shrink-0"><a id="header-logo" class="text-2xl font-bold text-lumo-navy tracking-tight"
+                        href="#">Lumo</a></div>
+
+                <!-- Search Bar (Centered) -->
+                <div class="hidden md:flex flex-grow justify-center max-w-xl mx-4">
+                    <div class="relative w-full">
+
+                        <input id="global-search-input"
+                            class="w-full pl-5 pr-12 py-2.5 border border-lumo-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lumo-navy/10 focus:border-lumo-navy bg-lumo-gray-50 transition-all placeholder-lumo-gray-400 font-sans"
+                            placeholder="Search products, brands and more..." type="text" />
+                        <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none"><i
+                                class="fa-solid fa-magnifying-glass text-lumo-gray-400 text-sm"></i></div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation and Icons (Right) -->
+                <div id="header-actions-container" class="flex items-center space-x-6">
+
+                    <nav id="header-nav-main" class="hidden lg:flex items-center"><a id="nav-link-marketplace"
+                            class="text-lumo-gray-600 hover:text-lumo-navy px-3 py-2 text-sm font-semibold transition-colors"
+                            href="#">Marketplace</a></nav>
+
+                    <div id="buttons-right-container" class="flex items-center space-x-5">
+
+                        <button id="btn-header-search-mobile" element-is="mobile-search-button"
+                            aria-label="Abrir búsqueda"
+                            class="md:hidden text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i
+                                class="fa-solid fa-magnifying-glass text-lg"></i></button>
+
+                        <button id="btn-header-cart" aria-label="Carrito de compras"
+                            class="text-lumo-gray-600 hover:text-lumo-navy transition-colors relative"><i
+                                class="fa-solid fa-cart-shopping text-lg"></i></button>
+
+                        <button id="btn-header-tracking" aria-label="Seguimiento de pedidos"
+                            class="text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i
+                                class="fa-solid fa-truck-fast text-lg"></i></button>
+
+                        <button id="btn-header-profile" aria-label="Perfil"
+                            class="flex items-center space-x-2 text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i
+                                class="fa-regular fa-user text-lg"></i><span
+                                class="hidden xl:inline text-sm font-medium">Profile</span></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub-header (Floating Categories) -->
+    <div element-is="subheader"
+        class="bg-white/80 backdrop-blur-md border-b border-lumo-gray-100 sticky top-[80px] z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center h-12 space-x-8 overflow-x-auto no-scrollbar">
+
+                <span class="text-sm font-bold text-lumo-navy whitespace-nowrap">Categorías:</span>
+
+                <nav id="category-nav-list" class="flex space-x-6">
+                    <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                        href="#">Skin Care</a>
+                    <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                        href="#">Tecnología</a>
+                    <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                        href="#">Hogar</a>
+                    <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                        href="#">Limpieza y Salud</a>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+</header>

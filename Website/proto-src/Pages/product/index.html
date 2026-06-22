@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lumo Smart Hub v2 | Detalle de Producto</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./tailwind-theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-surface text-on-surface font-sans">
+
+    <!-- Header -->
+    <header id="header-container">
+        <div element-is="main-header" class="bg-white border-b border-lumo-gray-200 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20 gap-base">
+
+                    <!-- Logo -->
+                    <div class="flex-shrink-0"><a id="header-logo"
+                            class="text-2xl font-bold text-lumo-navy tracking-tight" href="#">Lumo</a></div>
+
+                    <!-- Search Bar (Centered) -->
+                    <div class="hidden md:flex flex-grow justify-center max-w-xl mx-4">
+                        <div class="relative w-full">
+
+                            <input id="global-search-input"
+                                class="w-full pl-5 pr-12 py-2.5 border border-lumo-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lumo-navy/10 focus:border-lumo-navy bg-lumo-gray-50 transition-all placeholder-lumo-gray-400 font-sans"
+                                placeholder="Search products, brands and more..." type="text" />
+                            <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none"><i
+                                    class="fa-solid fa-magnifying-glass text-lumo-gray-400 text-sm"></i></div>
+
+                        </div>
+                    </div>
+
+                    <!-- Navigation and Icons (Right) -->
+                    <div id="header-actions-container" class="flex items-center space-x-6">
+
+                        <nav id="header-nav-main" class="hidden lg:flex items-center"><a id="nav-link-marketplace"
+                                class="text-lumo-gray-600 hover:text-lumo-navy px-3 py-2 text-sm font-semibold transition-colors"
+                                href="#">Marketplace</a></nav>
+
+                        <div id="buttons-right-container" class="flex items-center space-x-5">
+
+                            <button id="btn-header-search-mobile" element-is="mobile-search-button"
+                                aria-label="Abrir búsqueda"
+                                class="md:hidden text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i
+                                    class="fa-solid fa-magnifying-glass text-lg"></i></button>
+
+                            <button id="btn-header-cart" aria-label="Carrito de compras"
+                                class="text-lumo-gray-600 hover:text-lumo-navy transition-colors relative"><i
+                                    class="fa-solid fa-cart-shopping text-lg"></i></button>
+
+                            <button id="btn-header-tracking" aria-label="Seguimiento de pedidos"
+                                class="text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i
+                                    class="fa-solid fa-truck-fast text-lg"></i></button>
+
+                            <button id="btn-header-profile" aria-label="Perfil"
+                                class="flex items-center space-x-2 text-lumo-gray-600 hover:text-lumo-navy transition-colors"><i
+                                    class="fa-regular fa-user text-lg"></i><span
+                                    class="hidden xl:inline text-sm font-medium">Profile</span></button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-header (Floating Categories) -->
+        <div element-is="subheader"
+            class="bg-white/80 backdrop-blur-md border-b border-lumo-gray-100 sticky top-[80px] z-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center h-12 space-x-8 overflow-x-auto no-scrollbar">
+
+                    <span class="text-sm font-bold text-lumo-navy whitespace-nowrap">Categorías:</span>
+
+                    <nav id="category-nav-list" class="flex space-x-6">
+                        <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                            href="#">Skin Care</a>
+                        <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                            href="#">Tecnología</a>
+                        <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                            href="#">Hogar</a>
+                        <a class="text-sm text-lumo-gray-600 hover:text-lumo-navy whitespace-nowrap font-medium transition-colors border-b-2 border-transparent hover:border-lumo-navy py-3"
+                            href="#">Limpieza y Salud</a>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="max-w-container-max mx-auto px-gutter py-lg">
+        <!-- Classic PDP Header -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-xl mb-xl">
+            <!-- Left: Gallery -->
+            <div class="space-y-md">
+                <div
+                    class="rounded-lg overflow-hidden bg-surface-container-low border border-outline-variant/20 product-gallery-aspect">
+                    <img alt="Lumo Smart Hub v2 Main View" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida/AP1WRLstuhiWRBHolVvx2oWCUKmJTa4QsU1aIbOKvS8x5_yQM7PbxxuK_mPCBZOyQu2XMYxCHo2CnW221Dk2HY0qGrRnZrpIDPfZaRKMacVjcWUFyAKlpE3SQkI8zo_uyd_9PpCqscBVNbdWT0ooFqebE59_cMI8kYbzG6WKzRQyu4jmy69NPVhVeqkChWLrE58wGD2Z9ro5YXDt4kA6oRBvsmW_nmLOn9steyuw56eb9xBM3q1AAnGRLN5QfO8" />
+                </div>
+                <div class="flex space-x-sm overflow-x-auto no-scrollbar">
+                    <div class="w-24 h-24 rounded-xl border-2 border-primary overflow-hidden shrink-0 cursor-pointer">
+                        <img alt="Thumbnail 1" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida/AP1WRLstuhiWRBHolVvx2oWCUKmJTa4QsU1aIbOKvS8x5_yQM7PbxxuK_mPCBZOyQu2XMYxCHo2CnW221Dk2HY0qGrRnZrpIDPfZaRKMacVjcWUFyAKlpE3SQkI8zo_uyd_9PpCqscBVNbdWT0ooFqebE59_cMI8kYbzG6WKzRQyu4jmy69NPVhVeqkChWLrE58wGD2Z9ro5YXDt4kA6oRBvsmW_nmLOn9steyuw56eb9xBM3q1AAnGRLN5QfO8" />
+                    </div>
+                    <div
+                        class="w-24 h-24 rounded-xl border border-outline-variant/40 overflow-hidden shrink-0 cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="w-full h-full bg-surface-container-high flex items-center justify-center">
+                            <i class="fa-solid fa-image text-on-surface-variant"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="w-24 h-24 rounded-xl border border-outline-variant/40 overflow-hidden shrink-0 cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="w-full h-full bg-surface-container-high flex items-center justify-center">
+                            <i class="fa-solid fa-video text-on-surface-variant"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Details -->
+            <div class="flex flex-col justify-center">
+                <div class="mb-sm">
+                    <span
+                        class="font-label-md text-label-md text-on-tertiary-fixed-variant bg-secondary-container px-sm py-xs rounded-full">New
+                        Arrival</span>
+
+                </div>
+
+
+                <h1 class="font-display-lg text-display-lg text-primary mb-base">Lumo Smart Hub v2</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">El centro neurálgico de tu hogar
+                    inteligente. Controla, automatiza y asegura cada rincón de tu espacio con la tecnología más avanzada
+                    del ecosistema Lumo.</p>
+                <div class="mb-lg">
+                    <div class="flex items-center space-x-sm">
+                        <span class="font-headline-md text-headline-md text-primary">249,99 €</span>
+                        <span class="font-body-md text-body-md text-outline line-through">299,99 €</span>
+                    </div>
+                </div>
+                <!-- Variant Selector -->
+                <div class="mb-lg space-y-sm">
+                    <p class="font-label-md text-label-md text-on-surface">Acabado: <span class="font-bold">Midnight
+                            Slate</span></p>
+                    <div class="flex space-x-md">
+                        <button
+                            class="w-10 h-10 rounded-full bg-primary border-2 border-primary ring-2 ring-offset-2 ring-primary"></button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-outline-variant border-2 border-transparent hover:border-outline transition-all"></button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-surface-container-highest border-2 border-transparent hover:border-outline transition-all"></button>
+                    </div>
+                </div>
+                <!-- CTA -->
+                <div class="flex flex-col sm:flex-row space-y-md sm:space-y-0 sm:space-x-md">
+                    <button
+                        class="flex-1 bg-primary text-on-primary h-[56px] rounded-full font-label-md text-label-md flex items-center justify-center space-x-sm hover:opacity-90 active:scale-95 transition-all shadow-md">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Añadir al carrito</span>
+                    </button>
+                    <button
+                        class="w-[56px] h-[56px] rounded-full border border-outline flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="mt-lg grid grid-cols-2 gap-md border-t border-outline-variant/20 pt-lg">
+                    <div class="flex items-center space-x-sm text-on-surface-variant">
+                        <i class="fa-solid fa-truck text-primary"></i>
+                        <span class="font-body-sm text-body-sm">Envío gratuito</span>
+                    </div>
+                    <div class="flex items-center space-x-sm text-on-surface-variant">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span class="font-body-sm text-body-sm">3 años de garantía</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Landing Page Expansion -->
+        <!-- Benefits Section -->
+        <section class="py-xl bg-surface-container-low rounded-2xl px-md md:px-xl mb-xl">
+            <div class="text-center max-w-2xl mx-auto mb-xl">
+                <h2 class="font-headline-md text-headline-md text-primary mb-base">Diseñado para la vida moderna</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Lumo Smart Hub v2 no es solo un
+                    dispositivo, es el cerebro que hace que tu hogar trabaje para ti.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <div
+                    class="bg-surface-container-lowest p-lg rounded-2xl border border-outline-variant/10 text-center flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-md">
+                        <i class="fa-solid fa-gear text-[32px]"></i>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Control Total</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Gestiona todos tus dispositivos desde
+                        una única interfaz intuitiva o mediante comandos de voz cifrados.</p>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-lg rounded-2xl border border-outline-variant/10 text-center flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-md">
+                        <i class="fa-solid fa-lock text-[32px]"></i>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Seguridad Pro</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Encriptación de grado militar y
+                        almacenamiento local. Tus datos nunca salen de tu red privada.</p>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-lg rounded-2xl border border-outline-variant/10 text-center flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-md">
+                        <i class="fa-solid fa-leaf text-[32px]"></i>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Eficiencia Energética</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Optimiza el consumo de energía de tu
+                        hogar automáticamente basándose en tus hábitos diarios.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Lifestyle Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center mb-xl">
+            <div
+                class="rounded-2xl overflow-hidden h-[500px] soft-shadow border border-outline-variant/20 order-2 lg:order-1">
+                <img alt="Lumo Ecosystem Lifestyle" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida/AP1WRLuWFyDJV7FHpdXuCZ7CrviSzJhClBtsO1-LqqMwxa926IqfpM-nFgYhj_9ygTPmXBeSJwlzgFgFHXL0y_n3srRn5uGGLwJVd4pe1i4-QsD7C5QmZtPiRzQnodfSrYIZ7yrRAPzK-PEmX3KSLN7UH5j7HLnunTNEXaEbAJl7PttFDtx1L-5ipqOtZWvIjV_rDP8_usohZgZCjTgrDZshZICE-Xb5MXSxksHkSr7Lh05Oe7UPHHMv_L2a6w" />
+            </div>
+            <div class="space-y-md p-md order-1 lg:order-2">
+                <span class="font-label-md text-label-md text-primary uppercase tracking-widest">Estilo de Vida</span>
+                <h2 class="font-display-lg text-display-lg text-primary">Sincronización Perfecta</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Descubre un ecosistema donde tus
+                    dispositivos no solo se conectan, sino que colaboran. Desde tus auriculares hasta tu iluminación,
+                    todo fluye bajo la orquestación del Lumo Smart Hub v2.</p>
+                <ul class="space-y-sm">
+                    <li class="flex items-center space-x-sm font-body-md text-body-md text-on-surface">
+                        <i class="fa-solid fa-check-circle text-primary" style="font-variation-settings: 'FILL' 1;"></i>
+                        <span>Protocolo Matter &amp; Thread nativo</span>
+                    </li>
+                    <li class="flex items-center space-x-sm font-body-md text-body-md text-on-surface">
+                        <i class="fa-solid fa-check-circle text-primary" style="font-variation-settings: 'FILL' 1;"></i>
+                        <span>Respuesta instantánea de baja latencia</span>
+                    </li>
+                    <li class="flex items-center space-x-sm font-body-md text-body-md text-on-surface">
+                        <i class="fa-solid fa-check-circle text-primary" style="font-variation-settings: 'FILL' 1;"></i>
+                        <span>Actualizaciones automáticas vía OTA</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Technical Specs -->
+        <section class="py-xl mb-xl">
+            <h2 class="font-headline-md text-headline-md text-primary mb-lg border-l-4 border-primary pl-md">
+                Especificaciones Técnicas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Procesador</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">Octa-core Lumo Chip G1</p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Conectividad</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">Wi-Fi 6E, Bluetooth 5.3, Zigbee
+                    </p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Pantalla</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">7" OLED Touch HDR</p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Dimensiones</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">180 x 120 x 15 mm</p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Peso</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">420g</p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Compatibilidad</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">iOS, Android, Web App</p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Audio</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">Altavoces estéreo sintonizados
+                    </p>
+                </div>
+                <div class="p-md border-b border-outline-variant/30">
+                    <p class="font-label-sm text-label-sm text-outline mb-xs">Certificación</p>
+                    <p class="font-body-md text-body-md text-on-surface font-semibold">IPX4 Resistencia a salpicaduras
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Related Products Showcase -->
+        <section class="py-xl">
+            <div class="flex justify-between items-end mb-lg">
+                <h2 class="font-headline-md text-headline-md text-primary">Completa tu ecosistema</h2>
+                <a class="font-label-md text-label-md text-primary underline hover:opacity-70 transition-opacity"
+                    href="#">Ver todos</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+                <!-- Related Card 1 -->
+                <!-- Card 1 -->
+                <div element-is="product-card"
+                    class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow cursor-pointer lg:min-w-[280px] lg:min-h-[396px] flex flex-col">
+                    <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+                        <img alt="Lumo Peak Watch"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdXYOsWVIiR_AhheT0lcwIikMDN5aVFIX5nFLJrD0QykgSvYx0jxAgZWtcxKWk_iFrWLhY-p0ELBu92QXdo9Hbm3Ug4jBAEDSK2WsA92KZF6hP5F1GNFZ9azeKsMlpWkw0LvP239fslzG0i3rQsL_2LGp_3e4lom_l1WTPubKUZXrXIHVuK7jHUAjFVzO7ABlNfM6yScYT3dutgdCuKOMX645Xk_bVFmLtr6dVPM1P3yP9IQp70uV7NUW2Aa2kU5kndUnOMaibLoc"
+                            data-first-enter-image="true">
+                        <span
+                            class="absolute top-3 left-3 bg-lumo-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">25
+                            PV</span>
+                    </div>
+                    <div class="space-y-1 mb-4">
+                        <h4 class="font-bold text-lumo-navy">Lumo Peak Watch</h4>
+                        <p class="text-xs text-lumo-gray-500 truncate">High-performance tracking meets professional
+                            elegance.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-lg font-bold text-lumo-navy">$199.00</span>
+                        <button element-is="add-to-cart-btn"
+                            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+                            <i class="fa-solid fa-cart-shopping text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div element-is="product-card"
+                    class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow cursor-pointer lg:min-w-[280px] lg:min-h-[396px] flex flex-col">
+                    <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+                        <img alt="Sonic Pro Hub"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2fW-SOjjPhswdeBx069Gz0xtCk6RLs_FNuFrv4MNwcY-za1omwUxuh-ief3O-l1l97y9bOfyY1nLRCfTOQkH7lxlTw7oy3_iK_Whtipsjf8u6ESdC8JIlFzXomW9PPWeODIQMWM9O1DdLNAzJUeese2UXLvhImtUMEpe1JnpqqqxMtnPsCWD8AkrNOrOSAkOZ7jxwOFuUuW089NY3iMHb7ZMSrZuDl-2IBHKua0PdP1CxXJmi99oB_jV_iD09B78sqtASvxLpr_E">
+                        <span
+                            class="absolute top-3 left-3 bg-lumo-purple-dark text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">40
+                            PV</span>
+                    </div>
+                    <div class="space-y-1 mb-4">
+                        <h4 class="font-bold text-lumo-navy">Sonic Pro Hub</h4>
+                        <p class="text-xs text-lumo-gray-500 truncate">Immersive studio-quality audio with advanced
+                            noise cancellation.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-lg font-bold text-lumo-navy">$249.99</span>
+                        <button element-is="add-to-cart-btn"
+                            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+                            <i class="fa-solid fa-cart-shopping text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div element-is="product-card"
+                    class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow cursor-pointer lg:min-w-[280px] lg:min-h-[396px] flex flex-col">
+                    <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+                        <img alt="Lumo Tab Ultra"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7CCE-EEGuiW1KCXqmQ8_deI_mKuNZeSOvQQrtWjTRpTXAJD7AMV2JBT5pb0vF8TVexvuCgJcbaXL6cKIhppHjXNZoN9d-3lBy1dcfOlj7j62yOuV4vUnZv77NAIQomBl1_276PHeDhGzJ7cyAh7lYWltqnMZkMcdkpSMWzsQwiRZh3VJAhTMmDESNFM_-IqYYAh7XilgbYP9wtoO4KjQlfaaY88FvNqLfI_0G3YHLPHrs0r1i2CBUbMEFdv2m7M0TWSsUQcVq4Dg">
+                        <span
+                            class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">100
+                            PV</span>
+                    </div>
+                    <div class="space-y-1 mb-4">
+                        <h4 class="font-bold text-lumo-navy">Lumo Tab Ultra</h4>
+                        <p class="text-xs text-lumo-gray-500 truncate">The ultimate productivity tool. Ultra-thin and
+                            powerful.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-lg font-bold text-lumo-navy">$799.00</span>
+                        <button element-is="add-to-cart-btn"
+                            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+                            <i class="fa-solid fa-cart-shopping text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div element-is="product-card"
+                    class="group bg-white rounded-2xl p-4 shadow-soft border border-lumo-gray-100 hover:shadow-xl transition-shadow cursor-pointer lg:min-w-[280px] lg:min-h-[396px] flex flex-col">
+                    <div class="relative mb-4 rounded-xl overflow-hidden aspect-square">
+                        <img alt="Vision X Camera"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2sjmK8pJHzw6LhRaEunzVui2umB5esmUrk1ALhF6eQSdU_9oxvVYN1AslYVC-P4fyob18Zth55UV7fZOkSD62qRA2gXiApxUIIv4wPtRTlhAQenLAANdfsr9Z8kPrqzSY-BgyHK_fb5MPtWmfEX9G85Nf_EywLVnS-sycKnpDAVBvbQmXZgD39Fpx9h_t1q64UU3B-UQqiZwSFHDLjKkdHFoOWc78iFijP6OXkmqF_00TUj9NjPDtCF5P-PYg6yawZdE_EX3fE2Q">
+                        <span
+                            class="absolute top-3 left-3 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">85
+                            PV</span>
+                    </div>
+                    <div class="space-y-1 mb-4">
+                        <h4 class="font-bold text-lumo-navy">Vision X Camera</h4>
+                        <p class="text-xs text-lumo-gray-500 truncate">Capture your journey in stunning 8K detail.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-lg font-bold text-lumo-navy">$1,299</span>
+                        <button element-is="add-to-cart-btn"
+                            class="w-10 h-10 rounded-full bg-lumo-navy text-white flex items-center justify-center hover:bg-lumo-blue transition-colors">
+                            <i class="fa-solid fa-cart-shopping text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="relative overflow-hidden border-t border-outline-variant/30 bg-surface/60 backdrop-blur-sm"
+        style="background: linear-gradient(rgb(255, 255, 255), rgb(240, 242, 248));">
+
+        <!-- Decor element -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-container-max mx-auto px-gutter pt-8 pb-4">
+
+            <!-- Newsletter / CTA Section -->
+            <div
+                class="mb-8 p-6 rounded-xl bg-white/40 backdrop-blur-md border border-white/20 newsletter-shadow flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="max-w-xl text-center lg:text-left">
+                    <h3 class="text-base font-bold text-primary mb-1">Únete a la red Lumo</h3>
+                    <p class="text-xs text-on-surface-variant">Recibe las últimas novedades sobre el ecosistema y
+                        oportunidades exclusivas para emprendedores.</p>
+                </div>
+                <div class="w-full lg:w-auto flex flex-col sm:flex-row gap-2">
+                    <input
+                        class="px-4 py-1.5 rounded-full border border-outline-variant bg-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all w-full sm:w-64 text-xs"
+                        placeholder="Tu correo electrónico" type="email">
+                    <button
+                        class="bg-primary-container text-white text-xs font-semibold px-5 py-1.5 rounded-full hover:bg-primary transition-all active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap">Suscribirse</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
+                <!-- Column 1: Brand Identity -->
+                <div class="lg:col-span-4 flex flex-col space-y-3">
+                    <div class="text-xl font-bold text-primary tracking-tight z-10">
+                        Lumo
+                    </div>
+                    <p class="text-xs text-on-surface-variant max-w-sm leading-relaxed">
+                        Redefiniendo el comercio digital. Impulsamos a emprendedores con herramientas de próxima
+                        generación.
+                    </p>
+                    <div class="flex items-center space-x-2.5 pt-1">
+                        <a aria-label="Website"
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-white transition-all cursor-pointer active:scale-90 duration-300 group"
+                            href="#">
+                            <i class="fa-solid fa-globe text-[18px]" data-icon="public"></i>
+                        </a>
+                        <a aria-label="Share"
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-white transition-all cursor-pointer active:scale-90 duration-300 group"
+                            href="#">
+                            <i class="fa-solid fa-share text-[18px]" data-icon="share"></i>
+                        </a>
+                        <a aria-label="Community"
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-white transition-all cursor-pointer active:scale-90 duration-300 group"
+                            href="#">
+                            <i class="fa-solid fa-users text-[18px]" data-icon="groups"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Marketplace -->
+                <div class="lg:col-span-2 flex flex-col space-y-3">
+                    <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Marketplace</h4>
+                    <ul class="flex flex-col space-y-1.5">
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Categorías</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Ver Todo</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Más Vendidos</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Novedades</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: For Entrepreneurs -->
+                <div class="lg:col-span-3 flex flex-col space-y-3">
+                    <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Emprendedores</h4>
+                    <ul class="flex flex-col space-y-1.5">
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Únete como LBO</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Panel de Control</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Soporte</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Recursos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Company -->
+                <div class="lg:col-span-3 flex flex-col space-y-3">
+                    <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Compañía</h4>
+                    <ul class="flex flex-col space-y-1.5">
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Sobre Nosotros</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Carreras</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Contacto</a></li>
+                        <li><a class="text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer link-hover font-medium"
+                                href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-6 border-t border-outline-variant/10">
+            <div
+                class="w-full py-4 px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <!-- Copyright Section -->
+                <div class="text-xs text-on-surface-variant/80">
+                    © 2024 Lumo Ecosystem. Todos los derechos reservados.
+                </div>
+                <!-- Bottom Links -->
+                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-1.5">
+                    <a class="text-xs text-on-surface-variant/80 hover:text-primary transition-colors cursor-pointer font-medium"
+                        href="#">Términos</a>
+                    <a class="text-xs text-on-surface-variant/80 hover:text-primary transition-colors cursor-pointer font-medium"
+                        href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
