@@ -1,5 +1,4 @@
-<main id="main-container"
-  class="relative font-sans text-lumo-gray-800 bg-lumo-gray-50 antialiased selection:bg-lumo-navy selection:text-white">
+<main id="main-container" class="relative font-sans text-lumo-gray-800 bg-lumo-gray-50">
 
   <section id="directo-lumo-section" class="pt-10 pb-20 bg-lumo-gray-50/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +168,6 @@
       <div class="mt-16 text-center">
         <a id="directo-lumo-all-products"
           class="inline-flex items-center px-10 py-4 border-2 border-lumo-navy text-2xl font-bold rounded-full text-lumo-navy hover:bg-lumo-navy hover:text-white transition-all shadow-md group"
-          hx-get="Pages/catalog/index.html" hx-target="#main-container" hx-swap="outerHTML" hx-push-url="#catalog"
           href="#catalog">
           Explorar nuestro catálogo completo
           <i class="fa-solid fa-chevron-right ml-3 group-hover:translate-x-2 transition-transform"></i>
@@ -296,7 +294,7 @@
           </div>
         </div>
 
-        <!-- Hero Image & Widget -->
+        <!-- Hero Image -->
         <div class="relative lg:ml-10 mt-10 lg:mt-0">
 
           <!-- Main Laptop Image Placeholder -->
@@ -365,7 +363,7 @@
   </section>
 
   <!-- Sticky Wrapper for Tracking Widget -->
-  <div elment-is="hero-tracking-widget" hx-get="Pages/Homepage/Components/hero-tracking-widget.html" hx-trigger="load"
+  <div id="hero-tracking-widget" hx-get="Pages/Homepage/Components/hero-tracking-widget.html" hx-trigger="load"
     hx-target="this" hx-swap="outerHTML"></div>
 
 </main>

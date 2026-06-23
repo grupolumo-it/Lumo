@@ -38,7 +38,15 @@ function procesarRuta() {
                 ...atributosExtra
             };
 
+            // Ejecutamos el intercambio de contenido con htmx
             htmx.ajax('GET', urlFragmento, opcionesHtmx);
+
+            // Desplazamos la pantalla hacia arriba de forma inmediata tras cambiar de página
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
         } else {
             setTimeout(procesarRuta, 50);
         }

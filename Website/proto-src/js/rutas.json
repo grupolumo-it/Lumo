@@ -13,7 +13,7 @@
         "hx-trigger": "load",
         "hx-target": "#main-container",
         "hx-swap": "outerHTML",
-        "hx-push-url": "/#homepage"
+        "hx-push-url": "/"
     },
     "#login": {
         "archivo": "Pages/login/index.html",
