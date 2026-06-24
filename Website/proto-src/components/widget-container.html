@@ -1,8 +1,18 @@
-<div class="fixed bottom-8 right-0 pointer-events-none z-[100]">
-    <div
-        class="pointer-events-auto translate-x-[calc(100%-52px)] rounded-l-2xl rounded-r-none p-5 sm:p-6 shadow-2xl w-[320px] sm:w-[550px] border border-r-0 border-lumo-gray-100 bg-white/90 backdrop-blur-md transition-all duration-300 hover:translate-x-0 focus-within:translate-x-0 active:translate-x-0">
+<div class="fixed bottom-8 right-0 z-[100] pointer-events-none">
 
-        <div hx-wrapper></div>
+    <input type="checkbox" id="toggle-panel" class="peer hidden" />
 
-    </div>
+    <label for="toggle-panel" class="fixed inset-0 bg-transparent pointer-events-auto hidden max-sm:peer-checked:block">
+    </label>
+
+    <label for="toggle-panel"
+           class="block pointer-events-auto translate-x-[calc(100%-52px)] rounded-l-2xl rounded-r-none p-5 sm:p-6 shadow-2xl w-[320px] sm:w-[550px] border border-r-0 border-lumo-gray-100 bg-white/90 backdrop-blur-md transition-all duration-300 sm:hover:translate-x-0 max-sm:peer-checked:translate-x-0">
+
+        <div class="pointer-events-auto">
+
+            <div hx-wrapper></div> <!--Aqui va el contenido del widget HTMX lo inyecta automaticamente-->
+
+        </div>
+
+    </label>
 </div>

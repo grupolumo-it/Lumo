@@ -1,55 +1,51 @@
-<div class="fixed bottom-8 right-0 pointer-events-none z-[100]">
-    <div id="cart-widget"
-        class="pointer-events-auto translate-x-[calc(100%-52px)] rounded-l-2xl rounded-r-none p-5 sm:p-6 shadow-2xl w-[320px] sm:w-[550px] border border-r-0 border-lumo-gray-100 bg-white/90 backdrop-blur-md transition-all duration-300 hover:translate-x-0 focus-within:translate-x-0 active:translate-x-0">
+<div id="cart-floating-widget" hx-get="components\widget-container.html" hx-trigger="load" hx-target="this"
+    hx-swap="wrapper">
 
-        <div
-            class="flex items-center justify-between mb-4 text-lumo-navy font-semibold border-b border-lumo-gray-100 pb-2">
-            <div class="flex items-center min-w-[32px] justify-center">
-                <i class="fa-solid fa-shopping-cart text-lg text-lumo-navy"></i>
-                <span class="ml-3 whitespace-nowrap">Tu Carrito</span>
-            </div>
-            <span class="bg-lumo-navy text-white text-xs px-2 py-0.5 rounded-full">2 items</span>
+    <div class="flex items-center justify-between mb-4 text-lumo-navy font-semibold border-b border-lumo-gray-100 pb-2">
+        <div class="flex items-center min-w-[32px] justify-center">
+            <i class="fa-solid fa-shopping-cart text-lg text-lumo-navy"></i>
+            <span class="ml-3 whitespace-nowrap">Tu Carrito</span>
         </div>
+        <span class="bg-lumo-navy text-white text-xs px-2 py-0.5 rounded-full">2 items</span>
+    </div>
 
-        <div class="space-y-3 max-h-64 overflow-y-auto mb-4 pr-1">
-            <div class="flex items-center justify-between text-sm">
-                <div class="flex flex-col flex-1 min-w-0 pr-4">
-                    <span class="font-medium text-lumo-navy truncate">Producto de Ejemplo con Nombre Largo</span>
-                    <span class="text-xs text-gray-500">Cant: 1</span>
-                </div>
-                <div class="flex items-center gap-4 shrink-0">
-                    <span class="font-semibold text-lumo-navy">$29.99</span>
-                    <button class="text-gray-400 hover:text-red-500 transition-colors">
-                        <i class="fa-solid fa-trash-can text-sm"></i>
-                    </button>
-                </div>
+    <div class="space-y-3 max-h-64 overflow-y-auto mb-4 pr-1">
+        <div class="flex items-center justify-between text-sm">
+            <div class="flex flex-col flex-1 min-w-0 pr-4">
+                <span class="font-medium text-lumo-navy truncate">Producto de Ejemplo con Nombre Largo</span>
+                <span class="text-xs text-gray-500">Cant: 1</span>
             </div>
-
-            <div class="flex items-center justify-between text-sm">
-                <div class="flex flex-col flex-1 min-w-0 pr-4">
-                    <span class="font-medium text-lumo-navy truncate">Producto de Ejemplo B</span>
-                    <span class="text-xs text-gray-500">Cant: 2</span>
-                </div>
-                <div class="flex items-center gap-4 shrink-0">
-                    <span class="font-semibold text-lumo-navy">$49.98</span>
-                    <button class="text-gray-400 hover:text-red-500 transition-colors">
-                        <i class="fa-solid fa-trash-can text-sm"></i>
-                    </button>
-                </div>
+            <div class="flex items-center gap-4 shrink-0">
+                <span class="font-semibold text-lumo-navy">$29.99</span>
+                <button class="text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-trash-can text-sm"></i>
+                </button>
             </div>
         </div>
 
-        <div class="border-t border-lumo-gray-100 pt-3">
-            <div class="flex justify-between items-center mb-4 text-sm">
-                <span class="text-gray-600">Total estimado:</span>
-                <span class="text-base font-bold text-lumo-navy">$79.97</span>
+        <div class="flex items-center justify-between text-sm">
+            <div class="flex flex-col flex-1 min-w-0 pr-4">
+                <span class="font-medium text-lumo-navy truncate">Producto de Ejemplo B</span>
+                <span class="text-xs text-gray-500">Cant: 2</span>
             </div>
-            <button id="cart-checkout-btn"
-                class="w-full py-3.5 bg-lumo-navy text-white text-sm font-medium rounded-full hover:bg-lumo-blue transition-colors flex items-center justify-center gap-2 shadow-md">
-                <i class="fa-solid fa-credit-card text-xs"></i>
-                Iniciar Pago
-            </button>
+            <div class="flex items-center gap-4 shrink-0">
+                <span class="font-semibold text-lumo-navy">$49.98</span>
+                <button class="text-gray-400 hover:text-red-500 transition-colors">
+                    <i class="fa-solid fa-trash-can text-sm"></i>
+                </button>
+            </div>
         </div>
+    </div>
 
+    <div class="border-t border-lumo-gray-100 pt-3">
+        <div class="flex justify-between items-center mb-4 text-sm">
+            <span class="text-gray-600">Total estimado:</span>
+            <span class="text-base font-bold text-lumo-navy">$79.97</span>
+        </div>
+        <button id="cart-checkout-btn"
+            class="w-full py-3.5 bg-lumo-navy text-white text-sm font-medium rounded-full hover:bg-lumo-blue transition-colors flex items-center justify-center gap-2 shadow-md">
+            <i class="fa-solid fa-credit-card text-xs"></i>
+            Iniciar Pago
+        </button>
     </div>
 </div>
