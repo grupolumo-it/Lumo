@@ -1,4 +1,4 @@
-<main id="main-container" class="max-w-container-max mx-auto px-4 sm:px-gutter bg-surface text-on-surface relative">
+<div class="max-w-container-max mx-auto px-4 sm:px-gutter bg-surface text-on-surface relative">
 
     <flex-container class="py-md flex flex-col lg:flex-row gap-md lg:gap-lg w-full">
         <aside element-is="catalog-sidebar" class="hidden lg:flex flex-col w-64 shrink-0 space-y-md">
@@ -223,10 +223,10 @@
                 </div>
             </div>
             <!-- Product Grid -->
-            <div id="directo-lumo-products" element-is="products-grid"
+            <div id="catalog-products" element-is="products-grid"
                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div element-is="product-card" hx-get="/components/product-card.html" hx-trigger="load" hx-target="this"
+                <div element-is="product-card" hx-get="components/product-card.html" hx-trigger="load" hx-target="this"
                      hx-swap="outerHTML"></div>
                 <!-- Card 2 -->
                 <div element-is="product-card"
@@ -375,4 +375,4 @@
          hx-target="this" hx-swap="outerHTML"></div>
 
 
-</main>
+</div>

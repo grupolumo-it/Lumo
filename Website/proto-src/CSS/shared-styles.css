@@ -3,6 +3,15 @@
 /* ==========================================================================
    1. ESTILOS GLOBALES Y CONFIGURACIÓN BASE
    ========================================================================== */
+
+/* Desactivamos el "scroll anchoring" del navegador: al insertar contenido
+   nuevo (tarjetas de producto, widgets, etc.) Chrome mantenía la vista
+   anclada y la página se quedaba al final tras cambiar de ruta, anulando
+   el scroll al inicio que hace el enrutador. */
+html {
+    overflow-anchor: none;
+}
+
 body {
     font-family: 'Comfortaa', sans-serif;
     background-color: #faf9f9;
