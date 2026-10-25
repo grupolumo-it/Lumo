@@ -1,11 +1,14 @@
 <htmx-main id="root">
 
-    <header id="main-header" hx-get="components/layount/components/Header.html" hx-trigger="load" hx-target="this"
+    <!-- Los "slots" no llevan el id del componente que cargan: si el placeholder y
+         el componente compartido compartieran id, htmx mezclaría sus atributos
+         (handleAttributes) y los widgets se inicializarían dos veces. -->
+    <header id="header-slot" hx-get="components/layount/components/Header.html" hx-trigger="load" hx-target="this"
         hx-swap="outerHTML"></header>
 
     <main id="main-container"></main>
 
-    <footer id="main-footer" hx-get="components/layount/components/Footer.html" hx-trigger="load" hx-target="this"
+    <footer id="footer-slot" hx-get="components/layount/components/Footer.html" hx-trigger="load" hx-target="this"
         hx-swap="outerHTML"></footer>
 
 </htmx-main>

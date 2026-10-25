@@ -19,10 +19,10 @@
     <script defer src="js/router.htmx.js" data-config="js/rutas.json"></script>
 </head>
 
-<body hx-get="components/layount/layount.html" hx-trigger="load" hx-target="#root" hx-swap="outerHTML"
+<body hx-get="components/layount/layount.html" hx-trigger="load" hx-target="#root-slot" hx-swap="outerHTML"
     class="antialiased selection:bg-lumo-navy selection:text-white">
 
-    <htmx-main id="root">
+    <htmx-main id="root-slot">
         <p class="flex items-center justify-center min-h-screen text-gray-500 animate-pulse">Cargando componentes...</p>
     </htmx-main>
 

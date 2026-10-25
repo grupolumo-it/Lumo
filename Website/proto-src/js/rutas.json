@@ -2,33 +2,23 @@
     "#catalog": {
         "archivo": "Pages/catalog/index.html",
         "hx-get": "Pages/catalog/index.html",
-        "hx-trigger": "load",
         "hx-target": "#main-container",
-        "hx-swap": "outerHTML",
-        "hx-push-url": "/#catalog"
+        "hx-swap": "innerHTML"
     },
     "#homepage": {
         "archivo": "Pages/homepage/index.html",
         "hx-get": "Pages/homepage/index.html",
-        "hx-trigger": "load",
         "hx-target": "#main-container",
-        "hx-swap": "outerHTML",
-        "hx-push-url": "/"
+        "hx-swap": "innerHTML"
     },
     "#login": {
         "archivo": "Pages/login/index.html",
         "hx-get": "Pages/login/index.html",
-        "hx-trigger": "load",
-        "hx-target": "#root",
-        "hx-swap": "outerHTML",
-        "hx-push-url": "/#login"
+        "pagina": true
     },
     "#product": {
         "archivo": "Pages/product/index.html",
         "hx-get": "Pages/product/index.html",
-        "hx-trigger": "load",
-        "hx-target": "#main-container",
-        "hx-swap": "outerHTML",
-        "hx-push-url": "/#product"
+        "pagina": true
     }
 }
